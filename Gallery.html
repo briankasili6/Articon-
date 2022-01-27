@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="Home.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            font-family: Arial;
+        }
+        .gallery-row{
+            display: -ms-flexbox;
+            display: flex;
+            --ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            padding: 0 4px;
+            animation: alternate;
+            animation-duration: 5s;
+        }
+        /*create four equal columns that sits next to each other*/
+        .gallery-col{
+            --ms-flex: 25%;
+            flex: 25%;
+            max-width: 25%;
+            padding: 0 4px;
+            animation-duration: 5s;
+        }
+        .gallery-col img{
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+        }
+        /*responsive layout - makes a two column-layout instead of four columns*/
+        @media screen and (max-width: 800px) {
+            .gallery-col{
+                --ms-flex: 50%;
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+        /*responsive layout - makes the two columns stack on top of each other instead of next to each other*/
+        @media screen and (max-width: 600px) {
+            .gallery-col{
+                --ms-flex: 100%;
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href=""><img src="Articon/Articon.jpg" height="80px" width="120px"></a>
+            <div class="nav-links" id="nav-links">
+                <ul>
+                    <li><a href="cover.html">HOME</a></li>
+                    <li><a href="Gallery.html" class="Active">GALLERY</a></li>
+                    <li><a href="PORTRAITURE.html">PORTRAITURE</a></li>
+                    <li><a href="About.html">ABOUT</a></li>
+                    <li><a href="Contact.html">CONTACTS</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <div class="gallery-row">
+        <div class="gallery-col">
+            <img src="Articon/artpheonixx.jpg" style="width: 100%">
+            <img src="Articon/An-Die-Freude.jpg" style="width: 100%">
+            <img src="Articon/Ben.jpg" style="width: 100%">
+            <img src="Articon/Brown.jpg" style="width: 100%">
+            <img src="Articon/ckay_art.jpg" style="width: 100%">
+            <img src="Articon/triple_jay.jpg" style="width: 100%">
+        </div>
+        <div class="gallery-col">
+            <img src="Articon/ckays_art.jpg" style="width: 100%">
+            <img src="Articon/Cold.jpg" style="width: 100%">
+            <img src="Articon/Colored.jpg" style="width: 100%">
+            <img src="Articon/day-dreaming.jpg" style="width: 100%">
+            <img src="Articon/DiD.jpeg" style="width: 100%">
+        </div>
+        <div class="gallery-col">
+            <img src="Articon/endofvirals.jpg" style="width: 100%">
+            <img src="Articon/flickdavid.jpg" style="width: 100%">
+            <img src="Articon/Gracey.jpg" style="width: 100%">
+            <img src="Articon/jasonlegendaryart-.jpg" style="width: 100%">
+            <img src="Articon/Kiddo.jpg" style="width: 100%">
+        </div>
+        <div class="gallery-col">
+            <img src="Articon/Ku.jpg" style="width: 100%">
+            <img src="Articon/Landscape.png" style="width: 100%">
+            <img src="Articon/MDlove.jpg" style="width: 100%">
+            <img src="Articon/Ng'endo.jpg" style="width: 100%">
+            <img src="Articon/nigerian-arinze-stanley.jpg" style="width: 100%">
+        </div>
+    </div>
+</body>
+</html>
